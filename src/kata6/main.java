@@ -1,18 +1,20 @@
 package kata6;
 
+import branches.AmericanToyBusiness;
+import branches.AsianToyBusiness;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 import toyproduct.Toy;
-import toyproduct.models.CarToy;
-import toyproduct.models.HelicopterToy;
+import toyproduct.models.AmericanCarToy;
+import toyproduct.models.AmericanHelicopterToy;
 import toys.SerialNumberGenerator;
-import toys.ToyBusiness;
+import business.ToyBusiness;
 public class main {
     
     public static void main(String[] args) {
-        ToyBusiness business = new ToyBusiness();
-        
+        ToyBusiness business = new AmericanToyBusiness();
+        //ToyBusiness business = new AsianToyBusiness();
         ArrayList<Toy> toys = new ArrayList<>();
         
 

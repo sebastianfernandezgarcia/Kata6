@@ -3,12 +3,12 @@ package toyproduct.models;
 import toyproduct.Toy;
 
 
-public class CarToy implements Toy{
+public class AmericanHelicopterToy implements Toy{
     final private Integer serialNumber;
     
-    final String type = "car";
+    final String type = "helicopter";
     
-    public CarToy(Integer serialNumber) {
+    public AmericanHelicopterToy(Integer serialNumber) {
         this.serialNumber = serialNumber;
     }
     
@@ -30,12 +30,12 @@ public class CarToy implements Toy{
     @Override
     public void label() {
         System.out.printf("Labelling '%s''%d'\n", this.type,  this.serialNumber);
+        
     }
-    
-     
-    @Override 
+
+    @Override
     public String toString() {
-        return "CarToy{" + "serialNumber=" + serialNumber + '}';
+        return "AmericanHelicopterToy{" + "serialNumber=" + serialNumber + '}';
     }
-    
+ 
 }
