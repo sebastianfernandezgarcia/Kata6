@@ -25,7 +25,7 @@ public class main {
         //ToyBusiness business = new AsianToyBusiness();
         ArrayList<Toy> toys = new ArrayList<>();
                 
-        SerialNumberGenerator generator = new SerialNumberGenerator();
+        //SerialNumberGenerator generator = new SerialNumberGenerator();
 
        Scanner in = new Scanner(System.in);
        String line = "";
