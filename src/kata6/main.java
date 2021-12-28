@@ -9,12 +9,18 @@ import toyproduct.models.AmericanCarToy;
 import toyproduct.models.AmericanHelicopterToy;
 import factories.SerialNumberGenerator;
 import business.ToyBusiness;
-import factories.regionalfactories.AmericanToyFactory;
+import factories.regionalfactories.AmericanCarToyFactory;
+import factories.regionalfactories.AmericanSubmarineToyFactory;
+import factories.regionalfactories.AsianHelicopterToyFactory;
+
 public class main {
     
     public static void main(String[] args) {
          
-        ToyBusiness business = new ToyBusiness(new AmericanToyFactory());
+        ToyBusiness business = new ToyBusiness();
+        business.add("car", new AmericanCarToyFactory());
+        business.add("helicopter", new AsianHelicopterToyFactory());
+        business.add("submarine", new AmericanSubmarineToyFactory());
         //ToyBusiness business = new ToyBusiness(new AsianToyFactory());
         //ToyBusiness business = new AsianToyBusiness();
         ArrayList<Toy> toys = new ArrayList<>();
@@ -29,6 +35,7 @@ public class main {
            switch (line) {
                 case "car": 
                 case "helicopter": 
+                case "submarine":
                     toys.add(business.produceToy(line));
                     System.out.println("Built toys: "+toys.stream()
                                                  .map(c -> c.toString())
